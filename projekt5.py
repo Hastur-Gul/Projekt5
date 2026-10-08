@@ -1,7 +1,13 @@
 # Ett program där man kan spela sten, sax, påse mot datorn
 
-# Fråga användaren om deras val(Sten, sax eller påse)
-# Om användaren skriver något annat än sten, sax eller påse, skriv ut ett felmeddelande och be dem försöka igen
+try:
+    användarens_val = input("välj sten, sax eller påse (sten/sax/påse): ").lower()
+    if användarens_val not in ["sten", "sax", "påse"]:
+        raise ValueError("Ogiltigt val. Välj sten, sax eller påse.")
+except ValueError as e:
+    print(e)
+    exit()
+
 # Datorn ska slumpa fram ett val(Sten, sax eller påse)
 # Visa användarens val och datorns val
 # Bestäm vem som vinner och skriv ut resultatet
