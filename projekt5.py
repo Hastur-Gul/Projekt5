@@ -17,5 +17,14 @@ datorns_val = random.choice(val)
 print(f"Du valde: {användarens_val}")
 print(f"Datorn valde: {datorns_val}")
 
-# Bestäm vem som vinner och skriv ut resultatet
+if användarens_val == datorns_val:
+    print("Oavgjort!")
+elif (användarens_val == "sten" and datorns_val == "sax") or \
+(användarens_val == "sax" and datorns_val == "påse") or \
+(användarens_val == "påse" and datorns_val == "sten"):
+    print("Du vinner!")
+else:
+    print("Datorn vinner!")
+
+
 # Fråga användaren om de vill spela igen, om de svarar ja, starta om spelet, annars avsluta programmet
